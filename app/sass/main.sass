@@ -1,0 +1,30 @@
+//MIXIN
+@mixin absolute
+  position: absolute
+
+@mixin full_width
+  width: 100%
+
+@mixin x_large
+  @media (min-width: 1180px)
+    @content
+
+@mixin large
+  @media (max-width: 1180px)
+    @content
+
+@mixin medium
+  @media (max-width: 991px)
+    @content
+
+@mixin small
+  @media (max-width: 767px)
+    @content
+
+@mixin xs_small
+  @media (max-width: 576px)
+    @content
+//END MIXIN
+
+//ANIMATION
+//END ANIMATION
