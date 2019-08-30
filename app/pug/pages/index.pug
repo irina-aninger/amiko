@@ -5,10 +5,152 @@ html(lang='utf-8')
         title Амико
         link(href='./css/normalize.css', rel='stylesheet')
         link(href='./css/main.css', rel='stylesheet')
-        link(href="https://fonts.googleapis.com/css?family=Roboto:100&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet")
     body
-        header: .container
-        section
-        footer: .container
+        header
+            .top__adress: .container
+            .header__wrapper
+                .container
+                .header__nav: .container
+                    nav: ul
+                        li: a(href='') Каталог
+                        li: a(href='') Печать логотипов
+                        li: a(href='') О нас
+                        li: a(href='') Доставка
+                        li: a(href='') Оплата
+                        li: a(href='') Контакты
+                    button Связаться
+        section#content
+            .container
+                .breadcrumbs: ul
+                    li: a(href='') Главная
+                    li: a(href='') Каталог
+                    li: a(href='') Бумажные стаканчики
+                    li: a(href='') Стакан двухслойный 3D
+                .product__wrapper
+                    .image__box
+                        img(src='./img/product__01.png')
+                        ul.stock__list
+                            li.new New
+                    .product__info
+                        h1 Стаканчик бумажный одностойный, крафт
+                        ul.price__product
+                            li.price <span>2,55 BYN</span>/1000 шт
+                            li.old__price 3,40 руб
+                        .property
+                            ul
+                                li <span>Объём,</span> мл
+                                    ul.volume_tabs
+                                        li 100
+                                        li 170
+                                        li 195
+                                        li 205
+                                        li 250
+                                        li 300
+                                        li 400
+                                        li 500
+                                li <span>Артикул:</span>Стакан гофрированный, двухслойный
+                                li <span>Размер:</span>d1- 80 х d2 - 56 х h - 92
+                                li <span>Материал:</span>PAP+1PE
+                                li <span>Плотность:</span>260+18PE 120/120  г/м2;
+                        .add_cart__box
+                            .count_box
+                                span.minus.add-value
+                                input(name='count' type='text' value='1' id='count')
+                                span.plus.add-value
+                            ul.count_pack
+                                li Количество в коробке: <span>500 шт</span>
+                                li Количество в упаковке: <span>25 шт</span>
+                            .cart_btn
+                                button.order__btn(value='cart/add' type='submit') Заказать
+                                button.add_cart__btn(value='cart/add' type='submit') В корзину
+                .related__wrapper
+                    h2 Сопутствующие товары
+                        span Сопутствующие
+                    .related__items
+                        .related__item
+                            .image__box
+                                img(src='./img/related_01.png')
+                                ul.stock__list
+                                    li.sale Sale
+                                    li.new New
+                            a.title(href='') Крышка для бумажных стаканов черная
+                            ul.price__item
+                                li.old__price 3,40 руб
+                                li.price <span>от 2,55 BYN</span>/1000 шт
+                            button.add__cart Купить
+                        .related__item
+                            .image__box
+                                img(src='./img/related_02.png')
+                            a.title(href='') Размешиватель для кофе пластмассовый
+                            ul.price__item
+                                li.old__price 3,40 руб
+                                li.price <span>от 2,55 BYN</span>/1000 шт
+                            button.add__cart Купить
+                        .related__item
+                            .image__box
+                                img(src='./img/related_03.png')
+                            a.title(href='') Размешиватель для кофе деревянный
+                            ul.price__item
+                                li.old__price 3,40 руб
+                                li.price <span>от 2,55 BYN</span>/1000 шт
+                            button.add__cart Купить
+                        .related__item
+                            .image__box
+                                img(src='./img/related_04.png')
+                            a.title(href='') Бумажные салфетки
+                            ul.price__item
+                                li.old__price 3,40 руб
+                                li.price <span>от 2,55 BYN</span>/1000 шт
+                            button.add__cart Купить
+        footer
+            .container
+                ul.contact
+                    li
+                        p.title Телефоны
+                        ul
+                            li: a(href='') 8 (017) 291-06-03
+                            li: a(href='') 8 (017) 291-06-05
+                    li
+                        p.title Факс
+                        ul
+                            li: a(href='') 8 (017) 291-06-02
+                            li: a(href='') 8 (017) 291-06-04
+                    li
+                        p.title E-mail
+                        ul
+                            li: a(href='') amik@paket.by
+                .footer__catalog
+                    p.title Каталог
+                    ul
+                        li: a(href='') Стаканы
+                        li: a(href='') Крышки
+                        li: a(href='') Упаковка
+                        li: a(href='') Контейнеры
+                        li: a(href='') Креманки
+                        li: a(href='') Посуда
+                        li: a(href='') Дополнительный ассортимент
+                        li: a(href='') Упаковочная бумага
+                        li: a(href='') Акции
+                ul.adress
+                    li
+                        p.title Время работы
+                        p Время работы: Пн-пт: 8-00 - 17-00, Сб, Вс:  выходной
+                    li
+                        p.title Адрес
+                        p 220024, г.Минск ул. Бабушкина 54, к.205
+                        p ООО «Амик-О»<br>Юр. адрес: 220012, РБ, г. Минск, ул. Сурганова, д.27, оф.33<br>В торговом реестре РБ с 6 февраля 2017 года №366910<br>УНП: 192743895<br>Выдано Минским Городским исполнительным комитетом 06.12.2016 г.
+                    li
+                        p.title E-mail
+                        a(href='') amik@paket.by
+            .footer__nav
+                ul
+                    li: a(href='') Каталог
+                    li: a(href='') Печать логотипов
+                    li: a(href='') О нас
+                    li: a(href='') Доставка
+                    li: a(href='') Оплата
+                    li: a(href='') Контакты
+
 
         script(src='./js/common.js')
