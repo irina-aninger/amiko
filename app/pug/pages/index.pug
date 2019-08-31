@@ -9,8 +9,23 @@ html(lang='utf-8')
     body
         header
             .top__adress: .container
+                ul
+                    li: a(href='') 8 (017) 291-06-03
+                    li: a(href='') 8 (017) 291-06-05
+                    li Адрес: г.Минск ул. Бабушкина 54, к.205
+                    li Время работы: Пн-пт: 8-00 - 17-00, Сб, Вс:  выходной
+                    li: a(href='') E-mail:Amik@paket
             .header__wrapper
-                .container
+                .header__middle: .container
+                    a.logo
+                        img(src='./img/logo.png')
+                    .search__box
+                        input(type='search' id='search' placeholder='Поиск товара')
+                        button
+                    .top_cart
+                        a(href='')
+                            i.fa.fa_cart
+                            span.count 0
                 .header__nav: .container
                     nav: ul
                         li: a(href='') Каталог
@@ -141,8 +156,11 @@ html(lang='utf-8')
                         p 220024, г.Минск ул. Бабушкина 54, к.205
                         p ООО «Амик-О»<br>Юр. адрес: 220012, РБ, г. Минск, ул. Сурганова, д.27, оф.33<br>В торговом реестре РБ с 6 февраля 2017 года №366910<br>УНП: 192743895<br>Выдано Минским Городским исполнительным комитетом 06.12.2016 г.
                     li
-                        p.title E-mail
-                        a(href='') amik@paket.by
+                        ul.pay_systems
+                            li: img(src='./img/visa.png')
+                            li: img(src='./img/master_card.png')
+                            li: img(src='./img/belkart.png')
+                            li: img(src='./img/easy_pay.png')
             .footer__nav
                 ul
                     li: a(href='') Каталог
