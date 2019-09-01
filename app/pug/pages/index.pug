@@ -5,46 +5,47 @@ html(lang='utf-8')
         title Амико
         link(href='./css/normalize.css', rel='stylesheet')
         link(href='./css/main.css', rel='stylesheet')
-        link(href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet")
     body
         header
             .top__adress: .container
                 ul
-                    li: a(href='') 8 (017) 291-06-03
-                    li: a(href='') 8 (017) 291-06-05
+                    li: a(href='tel:80172910603') 8 (017) 291-06-03
+                    li: a(href='tel:80172910605') 8 (017) 291-06-05
                     li Адрес: г.Минск ул. Бабушкина 54, к.205
                     li Время работы: Пн-пт: 8-00 - 17-00, Сб, Вс:  выходной
-                    li: a(href='') E-mail:Amik@paket
+                    li: a(href='mailto:Amik@paket') E-mail: Amik@paket
             .header__wrapper
                 .header__middle: .container
                     a.logo
-                        img(src='./img/logo.png')
+                        img(src='./img/logo.png' alt='logo')
                     .search__box
                         input(type='search' id='search' placeholder='Поиск товара')
                         button
                     .top_cart
-                        a(href='')
+                        a(href='#')
                             i.fa.fa_cart
                             span.count 0
                 .header__nav: .container
                     nav: ul
-                        li: a(href='') Каталог
-                        li: a(href='') Печать логотипов
-                        li: a(href='') О нас
-                        li: a(href='') Доставка
-                        li: a(href='') Оплата
-                        li: a(href='') Контакты
+                        li: a(href='#') Каталог
+                        li: a(href='#') Печать логотипов
+                        li: a(href='#') О нас
+                        li: a(href='#') Доставка
+                        li: a(href='#') Оплата
+                        li: a(href='#') Контакты
+                    .burger
+                        span
                     button Связаться
         section#content
             .container
                 .breadcrumbs: ul
-                    li: a(href='') Главная
-                    li: a(href='') Каталог
-                    li: a(href='') Бумажные стаканчики
-                    li: a(href='') Стакан двухслойный 3D
+                    li: a(href='#') Главная
+                    li: a(href='#') Каталог
+                    li: a(href='#') Бумажные стаканчики
+                    li: a(href='#') Стакан двухслойный 3D
                 .product__wrapper
                     .image__box
-                        img(src='./img/product__01.png')
+                        img(src='./img/product__01.png' alt='Стаканчик бумажный одностойный, крафт')
                         ul.stock__list
                             li.new New
                     .product__info
@@ -85,35 +86,35 @@ html(lang='utf-8')
                     .related__items
                         .related__item
                             .image__box
-                                img(src='./img/related_01.png')
+                                img(src='./img/related_01.png' alt='Крышка для бумажных стаканов черная')
                                 ul.stock__list
                                     li.sale Sale
                                     li.new New
-                            a.title(href='') Крышка для бумажных стаканов черная
+                            a.title(href='#') Крышка для бумажных стаканов черная
                             ul.price__item
                                 li.old__price 3,40 руб
                                 li.price <span>от 2,55 BYN</span>/1000 шт
                             button.add__cart Купить
                         .related__item
                             .image__box
-                                img(src='./img/related_02.png')
-                            a.title(href='') Размешиватель для кофе пластмассовый
+                                img(src='./img/related_02.png' alt='Размешиватель для кофе пластмассовый')
+                            a.title(href='#') Размешиватель для кофе пластмассовый
                             ul.price__item
                                 li.old__price 3,40 руб
                                 li.price <span>от 2,55 BYN</span>/1000 шт
                             button.add__cart Купить
                         .related__item
                             .image__box
-                                img(src='./img/related_03.png')
-                            a.title(href='') Размешиватель для кофе деревянный
+                                img(src='./img/related_03.png' alt='Размешиватель для кофе деревянный')
+                            a.title(href='#') Размешиватель для кофе деревянный
                             ul.price__item
                                 li.old__price 3,40 руб
                                 li.price <span>от 2,55 BYN</span>/1000 шт
                             button.add__cart Купить
                         .related__item
                             .image__box
-                                img(src='./img/related_04.png')
-                            a.title(href='') Бумажные салфетки
+                                img(src='./img/related_04.png' alt='Бумажные салфетки')
+                            a.title(href='#') Бумажные салфетки
                             ul.price__item
                                 li.old__price 3,40 руб
                                 li.price <span>от 2,55 BYN</span>/1000 шт
@@ -124,29 +125,29 @@ html(lang='utf-8')
                     li
                         p.title Телефоны
                         ul
-                            li: a(href='') 8 (017) 291-06-03
-                            li: a(href='') 8 (017) 291-06-05
+                            li: a(href='tel:80172910603') 8 (017) 291-06-03
+                            li: a(href='tel:80172910605') 8 (017) 291-06-05
                     li
                         p.title Факс
                         ul
-                            li: a(href='') 8 (017) 291-06-02
-                            li: a(href='') 8 (017) 291-06-04
+                            li: a(href='tel:80172910602') 8 (017) 291-06-02
+                            li: a(href='tel:80172910604') 8 (017) 291-06-04
                     li
                         p.title E-mail
                         ul
-                            li: a(href='') amik@paket.by
+                            li: a(href='mailto:amik@paket.by') amik@paket.by
                 .footer__catalog
                     p.title Каталог
                     ul
-                        li: a(href='') Стаканы
-                        li: a(href='') Крышки
-                        li: a(href='') Упаковка
-                        li: a(href='') Контейнеры
-                        li: a(href='') Креманки
-                        li: a(href='') Посуда
-                        li: a(href='') Дополнительный ассортимент
-                        li: a(href='') Упаковочная бумага
-                        li: a(href='') Акции
+                        li: a(href='#') Стаканы
+                        li: a(href='#') Крышки
+                        li: a(href='#') Упаковка
+                        li: a(href='#') Контейнеры
+                        li: a(href='#') Креманки
+                        li: a(href='#') Посуда
+                        li: a(href='#') Дополнительный ассортимент
+                        li: a(href='#') Упаковочная бумага
+                        li: a(href='#') Акции
                 ul.adress
                     li
                         p.title Время работы
@@ -157,18 +158,18 @@ html(lang='utf-8')
                         p ООО «Амик-О»<br>Юр. адрес: 220012, РБ, г. Минск, ул. Сурганова, д.27, оф.33<br>В торговом реестре РБ с 6 февраля 2017 года №366910<br>УНП: 192743895<br>Выдано Минским Городским исполнительным комитетом 06.12.2016 г.
                     li
                         ul.pay_systems
-                            li: img(src='./img/visa.png')
-                            li: img(src='./img/master_card.png')
-                            li: img(src='./img/belkart.png')
-                            li: img(src='./img/easy_pay.png')
+                            li: img(src='./img/visa.png' alt='visa')
+                            li: img(src='./img/master_card.png' alt='master card')
+                            li: img(src='./img/belkart.png' alt='belkart')
+                            li: img(src='./img/easy_pay.png' alt='easy pay')
             .footer__nav
                 ul
-                    li: a(href='') Каталог
-                    li: a(href='') Печать логотипов
-                    li: a(href='') О нас
-                    li: a(href='') Доставка
-                    li: a(href='') Оплата
-                    li: a(href='') Контакты
+                    li: a(href='#') Каталог
+                    li: a(href='#') Печать логотипов
+                    li: a(href='#') О нас
+                    li: a(href='#') Доставка
+                    li: a(href='#') Оплата
+                    li: a(href='#') Контакты
 
 
         script(src='./js/common.js')
