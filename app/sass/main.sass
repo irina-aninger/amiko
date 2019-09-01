@@ -91,6 +91,7 @@ button
 
 input
   font: normal 16px 'Open Sans', sans-serif
+
   &:focus
     outline: none
 
@@ -151,6 +152,10 @@ header
     .container
       display: flex
       justify-content: space-between
+
+  .logo
+    img
+      height: 49px
 
   .search__box
     position: relative
@@ -214,29 +219,6 @@ header
       @include medium
         flex-wrap: wrap
 
-    nav
-      @include medium
-        display: none
-
-      ul
-        display: flex
-
-        li
-          padding-right: 66px
-          @include large
-            padding-right: 35px
-
-          &:last-child
-            padding-right: 0
-
-          a
-            color: rgba(255, 255, 255, 0.8)
-            font-weight: 700
-            text-transform: uppercase
-
-            &:hover
-              color: #ffffff !important
-
     button
       font: normal 16px 'Open Sans', sans-serif
       background: white
@@ -273,6 +255,29 @@ header
         background: #fdfdfd
         top: 12px
 
+nav
+  @include medium
+    display: none
+
+  ul
+    display: flex
+    flex-wrap: wrap
+
+  li
+    padding-right: 66px
+    @include large
+      padding-right: 35px
+
+    &:last-child
+      padding-right: 0
+
+    a
+      color: rgba(255, 255, 255, 0.8)
+      font-weight: 700
+      text-transform: uppercase
+
+      &:hover
+        color: #ffffff !important
 
 .breadcrumbs
   margin: 50px 0 37px 0
@@ -281,30 +286,32 @@ header
     display: flex
     flex-wrap: wrap
 
-    li
-      padding-right: 49px
-      position: relative
+  li
+    padding-right: 49px
+    position: relative
+
+    &::before
+      content: ''
+      position: absolute
+      right: 15px
+      top: 8px
+      height: 8px
+      width: 20px
+      background: url(../img/arrow.svg) no-repeat
+
+    &:last-child
+      padding-right: 0
 
       &::before
-        content: ''
-        position: absolute
-        right: 15px
-        top: 8px
-        height: 8px
-        width: 20px
-        background: url(../img/arrow.svg) no-repeat
+        content: none
 
-      &:last-child
-        padding-right: 0
+      a
+        color: rgba(0, 0, 0, 0.5)
 
-        &::before
-          content: none
-
-        a
-          color: rgba(0, 0, 0, 0.5)
-
-    a
-      color: rgba(0, 0, 0, 0.2)
+  a
+    color: rgba(0, 0, 0, 0.2)
+    @include xs_small
+      font-size: 12px
 
 
 .stock__list
@@ -360,6 +367,9 @@ header
     overflow: hidden
     @include small
       width: 100%
+      border-left: none
+      border-top: 0.5px solid rgba(0, 0, 0, 0.15)
+      padding: 17px 0 17px 0
 
   h1
     font-size: 24px
@@ -371,6 +381,7 @@ header
 
   .price__product
     display: flex
+    flex-wrap: wrap
     align-items: baseline
     margin-bottom: 35px
 
@@ -380,10 +391,10 @@ header
       &.price
         margin-right: 30px
 
-        span
-          font-size: 20px
-          font-weight: 700
-          color: #E56943
+      span
+        font-size: 20px
+        font-weight: 700
+        color: #E56943
 
       &.old__price
         text-decoration: line-through
@@ -434,102 +445,102 @@ header
         border-right: 1px solid #595959
         border-radius: 0 5px 5px 0
 
-  .add_cart__box
-    .count_box
-      display: flex
-      padding-bottom: 17px
+.add_cart__box
+  .count_box
+    display: flex
+    padding-bottom: 17px
 
-      span
-        background: #EAEAEA
-        border-radius: 4px
-        width: 40px
-        height: 40px
-        position: relative
-        cursor: pointer
-
-        &.minus
-          &::before
-            content: ''
-            position: absolute
-            width: 9px
-            height: 1px
-            background: #595959
-            top: 0
-            bottom: 0
-            left: 0
-            right: 0
-            margin: auto
-
-        &.plus
-          &::before
-            content: ''
-            position: absolute
-            width: 11px
-            height: 1px
-            background: #595959
-            top: 0
-            bottom: 0
-            left: 0
-            right: 0
-            margin: auto
-
-          &::after
-            content: ''
-            position: absolute
-            width: 11px
-            height: 1px
-            background: #595959
-            top: 0
-            bottom: 0
-            left: 0
-            right: 0
-            margin: auto
-            transform: rotate(90deg)
-
-    #count
-      border: 1px solid #E0E0E0
-      box-sizing: border-box
+    span
+      background: #EAEAEA
       border-radius: 4px
+      width: 40px
+      height: 40px
+      position: relative
+      cursor: pointer
+
+      &.minus
+        &::before
+          content: ''
+          position: absolute
+          width: 9px
+          height: 1px
+          background: #595959
+          top: 0
+          bottom: 0
+          left: 0
+          right: 0
+          margin: auto
+
+      &.plus
+        &::before
+          content: ''
+          position: absolute
+          width: 11px
+          height: 1px
+          background: #595959
+          top: 0
+          bottom: 0
+          left: 0
+          right: 0
+          margin: auto
+
+        &::after
+          content: ''
+          position: absolute
+          width: 11px
+          height: 1px
+          background: #595959
+          top: 0
+          bottom: 0
+          left: 0
+          right: 0
+          margin: auto
+          transform: rotate(90deg)
+
+  #count
+    border: 1px solid #E0E0E0
+    box-sizing: border-box
+    border-radius: 4px
+    color: #595959
+    font-weight: 700
+    width: 100px
+    text-align: center
+    padding: 8px 0
+    margin: 0 15px
+
+  .count_pack
+    display: flex
+    color: #CACACA
+    flex-wrap: wrap
+
+    span
       color: #595959
-      font-weight: 700
-      width: 100px
-      text-align: center
-      padding: 8px 0
-      margin: 0 15px
 
-    .count_pack
-      display: flex
-      color: #CACACA
-      @include large
-        flex-wrap: wrap
+    li
+      padding-right: 55px
 
-      span
-        color: #595959
+      &:last-child
+        padding-right: 0
 
-      li
-        padding-right: 55px
+  .cart_btn
+    padding: 34px 0 19px 0
 
-        &:last-child
-          padding-right: 0
+    button
+      width: 160px
+      margin-bottom: 9px
+      border: 1px solid #E56943
+      border-radius: 4px
+      padding: 13px 0
+      @include xs_small
+        width: 100%
 
-    .cart_btn
-      padding: 34px 0 19px 0
-
-      .order__btn
+      &.order__btn
         background: #E56943
-        border-radius: 4px
         color: #ffffff
-        padding: 13px 0
-        border: 1px solid #E56943
-        width: 160px
         margin-right: 36px
 
-      .add_cart__btn
+      &.add_cart__btn
         background: rgba(247, 247, 247, 0.2)
-        border: 1px solid #E56943
-        border-radius: 4px
-        padding: 13px 0
-        width: 160px
 
 
 .related__wrapper
@@ -553,6 +564,12 @@ header
       @include medium
         font-size: 70px
         top: 22px
+      @include small
+        font-size: 58px
+        top: 32px
+      @include xs_small
+        font-size: 38px
+        top: 46px
 
   .related__items
     display: flex
@@ -610,8 +627,7 @@ header
       justify-content: space-between
       align-items: baseline
       padding: 17px 0 84px 0
-      @include large
-        flex-wrap: wrap
+      flex-wrap: wrap
 
       .old__price
         text-decoration: line-through
